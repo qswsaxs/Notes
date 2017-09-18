@@ -39,8 +39,8 @@
 *Each hypotheses h is a decision tree*
 *trees sorts x to leaf, which assigns y*
 ![Decision Tree Example](https://image.slidesharecdn.com/l7decision-treetable-130318112451-phpapp01/95/l7-decision-tree-table-21-638.jpg?cb=1363605932)
-### Stages
-#### Given data
+### Stages of batch machine learning
+#### Given __labeled__ data
 - X & Y
 #### Train the model:
 - model<-classifier.train(X,Y)
@@ -81,9 +81,41 @@ How do we choose which attributes are best?
  ### Information Gain
  #### Impurity/Entropy(informal)
  - **Entropy:** Measures the level of impurity in a group
- ![Compute entropy](http://www.saedsayad.com/images/Entropy_3.png)
+ ![Compute entropy](http://www.saedsayad.com/images/Entropy_3.png)  
 It is the expected number of bits needed to encode a randomly drawn value of X(under most efficient code)
 *From information theory(Huffman code)*
-![](https://i.stack.imgur.com/1fEJE.png)
+![](https://i.stack.imgur.com/1fEJE.png)  
 Information Gain = entropy(parent)-[(weighted)average entropy(children)]
 
+## Class 3: k-Nearest Neighbor & Instance-based Learning
+### Stages of batch machine learning
+#### Given __labeled__ data
+- X & Y
+#### Train the model:
+- model<-classifier.train(X,Y)
+#### Apply the model to new data:
+- y<-model.predict(x)
+## Class 4: Evaluation
+### Classification Metrics
+accuracy=# correct predictions/# test instance
+error=1-accuracy
+### Confusion Matrix
+- Given a dataset of P positive instances and N negative instances
+
+|Predicted|class|matrix
+| ------ | ------ | ----|
+|   | Yes | NO |
+| Yes | TP | FN |
+| No  | FP | TN |
+- accuracy=(TP+TN)/(P+N)
+- precision=TP/(TP+FP)
+- recall=TP/(TP+FN)
+
+### Training Data and Test Data
+- Traning data: data used to build the model
+- Test data: new data, not used in the training
+- Need to avoid overfitting
+### Comparing Classifiers
+Idea:divide full data set into n parts
+![n-fold cross validation](http://chrisjmccormick.files.wordpress.com/2013/07/10_fold_cv.png)  
+### Optimizing Model Parameters
