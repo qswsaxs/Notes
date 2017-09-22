@@ -119,3 +119,48 @@ error=1-accuracy
 Idea:divide full data set into n parts
 ![n-fold cross validation](http://chrisjmccormick.files.wordpress.com/2013/07/10_fold_cv.png)  
 ### Optimizing Model Parameters
+loop for t trials
+1. randomize data set
+2. perform k-fold CV(Compute learning curve over each training/testing split)   
+
+Finally, compute statistics over t*k test performance
+### Learning Curve
+- Shows performance versus the # training examples
+- Compute learning curve over each training/testing split (taking average to have the learning curve)
+
+## Class 5: Linear Regression
+from intro:
+![Comparison of Learning Methods](https://image.slidesharecdn.com/hutter1-120821071909-phpapp02/95/introduction-to-statistical-machine-learning-65-728.jpg?cb=1345533592)
+### Regression
+Given:
+- Data X
+- Corresponding labels Y
+- Trying to figure out a curve fitting the data
+### Linear Regression
+- Hypothesis
+y'=a0x0+a1x1+a2x2+...+adxd=**a*****x**
+Assume x0=1
+- Fit model by minimizing sum of squared errors
+- Cost Function (Objective function)
+J(**a**)=(average of squares when the predictor is y'=**a*****x**)/2
+- Fit by solving **min** J(**a**)
+### Intuition Behind Cost Function
+There is only one minimum.
+![](https://qph.ec.quoracdn.net/main-qimg-7e46f059685ebb2d7c6b365f0fff9114)
+### Basic Search Procedure
+- Choose initial value for **a**
+- Before we reach a minimum:
+Choose a new value for **a** to reduce J(**a**)
+### Gradient Descent	 
+
+1.Initialize **a**
+2.Repeat until convergence:
+**a**=**a**- α *gradient(J(**a**))
+
+α is called the learning rate (small,e.g. 0.5)
+- Assume convergence when ||**a**'-**a**||(2-norm)<e
+- To achieve simultaneous update:   
+At the start of each GD iteration, compute **a*****x**   
+Then use this stored value in the update step loop
+### Choosing α
+To see if gradient descent is working, print out the function value each iteration
