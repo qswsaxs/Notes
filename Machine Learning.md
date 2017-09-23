@@ -1,5 +1,11 @@
 # Machine Learning
 [Class 1: Forming of learning problem](#class-1-forming-of-learning-problem)
+[Class 2: Decision Trees](#class-2-decision-trees)
+[Class 3: k-Nearest Neighbor & Instance-based Learning](#Class-3-k-Nearest-Neighbor-Instance-based-Learning)
+[Class 4: Evaluation](#class-4-evaluation)
+[Class 5: Linear Regression](#class-5-linear-regression)
+[Class 6: Linear Classification: Perceptron](#class-6-linear-classification-perceptron)
+[Class 7: Logistic Regression](#class-7-logistic-regression)
 ## Class 1: Forming of learning problem
 ### Train set & Test set
 - We generally assume that the training and test examples are independently drawn from the same overall distribution of data
@@ -19,7 +25,7 @@
 - Consolidate and deploy discovered knowledge
 ### Lessons Learned about Learning
 - Different search methods' advantages and disadvantages
-## Class 2:Decision Trees
+## Class 2: Decision Trees
 ### Function Approximation
 #### Problem Setting
 - Set of possible instances X
@@ -178,7 +184,7 @@ Gradient update:
 ![](http://image.xlgps.com/upload/d/cb/dcb2e44a54ae7ab431afab2dc15deb13.png)
 **The regularization part pulls the vector Theta (a) to zero vector.**
 
-## Class 6 Linear Classification: Perceptron
+## Class 6: Linear Classification: Perceptron
 ### Linear Classifiers
 - A **hyperplane** partitions **R** into two half-spaces defined by the normal vector. **Assumed to pass through origin**
 - **Linear classifiers**: represent decision boundary by hyperplane
@@ -200,7 +206,7 @@ For online training:
 - **Idea 1**: Use a combiantion of multiple perceptrons (i.e. neural networks)
 - **Idea 2**: Use the intermediate theta's (i.e. voted perceptron & averaged perceptron)
 
-## Class 7: Logistic regression
+## Class 7: Logistic Regression
 ### Classification Based on Probability
 - Give the probability of the instance being that class
 - Since the probability should be between 0 and 1, we use the logistic/sigmoid function
