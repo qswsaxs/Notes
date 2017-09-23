@@ -1,4 +1,5 @@
 # Machine Learning
+[Class 1: Forming of learning problem](#class-1-forming-of-learning-problem)
 ## Class 1: Forming of learning problem
 ### Train set & Test set
 - We generally assume that the training and test examples are independently drawn from the same overall distribution of data
