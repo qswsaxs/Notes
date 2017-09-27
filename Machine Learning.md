@@ -1,5 +1,5 @@
 # Machine Learning
-- [Class 1: Forming of learning problem](#class-1-forming-of-learning-problem)
+- [Class 1: Forming of learning problem](#class-1-forming-of-learning-problem) 
 - [Class 2: Decision Trees](#class-2-decision-trees)
 - [Class 3: k-Nearest Neighbor & Instance-based Learning](#class-3-k-nearest-neighbor--instance-based-learning)
 - [Class 4: Evaluation](#class-4-evaluation)
@@ -212,3 +212,14 @@ For online training:
 - Since the probability should be between 0 and 1, we use the logistic/sigmoid function
 - h(x) estimated p(y=1|x,theta)
 - ![](https://i.ytimg.com/vi/ThmZU3dTIDo/maxresdefault.jpg)
+# Interpretation
+- log(p(y=1|**x**,**theta**)/p(y=0|**x**,**theta**))=**theta*****x**
+- Hence we can find which feature xi is more important
+**Note**: the odds in favor of an event is the quantity p/(1-p)
+Hence the log odds is a linear function of x in logistic regression
+### Deriving the cost Function via Maximum Likelihood Estimation
+- LIkelihood of data is given by: l(theta)=Π(p(yi|xi;theta))
+- theta=argmax l(theta)=argmax log(l(theta))
+- ![](http://www.holehouse.org/mlclass/06_Logistic_Regression_files/Image%20[15].png)
+- We could still regularize the cost function
+### Multi-class Classification
